@@ -1,0 +1,42 @@
+using System;
+usingSystem.Collections.Generic;
+usingSystem.Linq;
+usingSystem.Runtime.InteropServices;
+usingSystem.Text;
+usingSystem.Threading.Tasks;
+
+namespace ConsoleApp16
+{
+internalclassProgram
+    {
+classFood
+        {
+publicvirtualvoid Eat()
+            {
+Console.WriteLine("Едим...");
+            }
+        }
+classPizza:  Food
+        {
+publicoverridevoid Eat()
+            {
+Console.WriteLine("Едимпиццу!");
+            }
+        }
+classBurger: Food
+        {
+publicoverridevoid Eat()
+            {
+Console.WriteLine("Едимбургер!");
+            }
+        }
+staticvoid Main(string[] args)
+        {
+Food[] band = { newPizza(), newBurger(), newFood() };
+foreach (var a in band)
+{
+a.Eat();
+            }
+        }
+}
+}
