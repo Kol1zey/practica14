@@ -1,0 +1,39 @@
+using System;
+usingSystem.Collections.Generic;
+usingSystem.Linq;
+usingSystem.Runtime.InteropServices;
+usingSystem.Text;
+usingSystem.Threading.Tasks;
+
+namespace ConsoleApp16
+{
+internalclassProgram
+    {
+abstractclassShape
+        {
+publicabstractvoid Draw();
+        }
+classCircle:  Shape
+        {
+publicoverridevoid Draw()
+            {
+Console.WriteLine("Рисуюкруг.");
+            }
+        }
+classTriangle: Shape
+        {
+publicoverridevoid Draw()
+            {
+Console.WriteLine("Рисуютреугольник.");
+            }
+        }
+staticvoid Main(string[] args)
+        {
+Shape[] shapes = { newCircle(), newTriangle(),  };
+foreach (var a in shapes)
+{
+a.Draw();
+            }
+        }
+}
+}
