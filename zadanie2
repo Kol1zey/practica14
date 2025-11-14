@@ -1,0 +1,42 @@
+using System;
+usingSystem.Collections.Generic;
+usingSystem.Linq;
+usingSystem.Runtime.InteropServices;
+usingSystem.Text;
+usingSystem.Threading.Tasks;
+
+namespace ConsoleApp16
+{
+internalclassProgram
+    {
+classMessage
+        {
+publicvirtualvoid Send()
+            {
+Console.WriteLine("Сообщениеотправлено.");
+            }
+        }
+classEmail :  Message
+        {
+publicoverridevoid Send()
+            {
+Console.WriteLine("Email отправлен!");
+            }
+        }
+classSMS : Message
+        {
+publicoverridevoid Send()
+            {
+Console.WriteLine("SMS отправлено!");
+            }
+        }
+staticvoid Main(string[] args)
+        {
+Message[] band = { newEmail(), newSMS(), newMessage() };
+foreach (var a in band)
+{
+a.Send();
+            }
+        }
+}
+}
