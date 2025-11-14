@@ -1,0 +1,42 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.InteropServices;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp16
+{
+internalclassProgram
+    {
+classPlayer
+        {
+publicvirtualvoid Attack()
+            {
+Console.WriteLine("Атакую!");
+            }
+        }
+classWarrior:  Player
+        {
+publicoverridevoid Attack()
+            {
+Console.WriteLine("Рублюмечом!");
+            }
+        }
+classArcher: Player
+        {
+publicoverridevoid Attack()
+            {
+Console.WriteLine("Стреляюизлука!");
+            }
+        }
+staticvoid Main(string[] args)
+        {
+Player[] team = { newWarrior(), newArcher(), newPlayer()};
+foreach (var a in team)
+{
+a.Attack();
+            }
+        }
+}
+}
