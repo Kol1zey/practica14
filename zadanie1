@@ -1,0 +1,42 @@
+using System;
+usingSystem.Collections.Generic;
+usingSystem.Linq;
+usingSystem.Runtime.InteropServices;
+usingSystem.Text;
+usingSystem.Threading.Tasks;
+
+namespace ConsoleApp16
+{
+internalclassProgram
+    {
+classInstrument
+        {
+publicvirtualvoid Play()
+            {
+Console.WriteLine("Играетмузыка...");
+            }
+        }
+classGuitar :  Instrument
+        {
+publicoverridevoid Play()
+            {
+Console.WriteLine("Брень-брень!");
+            }
+        }
+classDrum : Instrument
+        {
+publicoverridevoid Play()
+            {
+Console.WriteLine("Бум-бум!");
+            }
+        }
+staticvoid Main(string[] args)
+        {
+Instrument[] band = { newGuitar(), newDrum(), newInstrument() };
+foreach (var a in band)
+{
+a.Play();
+            }
+        }
+}
+}
